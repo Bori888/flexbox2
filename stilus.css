@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 10px;
+}
+main{
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+}
+nav , div ,header, aside , article , footer{
+    border: 1px solid gray;
+    padding: 10px;
+} 
+
+div {
+    background-color: bisque;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+
+
+}
+
+nav ul li {
+    padding: 10px;
+    background-color: rgb(231, 112, 112);
+    flex: 0 0 15%;
+}
+
+nav ul li:hover a {
+    color:rgb(110, 78, 7)
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+header, nav,  footer{
+    width: 100%;
+}
+
+article{
+    width: 70%;
+} 
+aside{
+    width: 30%;
+}
+
+/*article ben a dobozok*/
+article{
+    display: flex;
+    flex-wrap: wrap;
+} 
+article>div{
+    flex: 0 1 20%;
+}
+
+article >div:nth-child(1){
+    flex: 0 0 100%;
+    background-color: aquamarine;
+}
+
+form>div{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul{
+        flex-direction: column;
+        align-content: flex-start;
+    }
+    nav li ul{
+        flex: 0 1 100%;
+    }
+    article>div{
+        flex: 0 1 50%;
+    }
+    
+}
